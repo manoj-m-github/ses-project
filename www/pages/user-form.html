@@ -7,24 +7,24 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">First Name</span>
-          <input type="text">
+          <input type="text" ng-model="userData.firstName">
         </label>
         <label class="item item-input">
           <span class="input-label">Last Name</span>
-          <input type="text">
+          <input type="text" ng-model="userData.lastName">
         </label>
         <label class="item item-input item-select">
           <div class="input-label">
             Gender
           </div>
-          <select>
+          <select ng-model="userData.gender">
             <option>Male</option>
             <option>Female</option>
           </select>
         </label>
         <label class="item item-input">
           <span class="input-label">Birthday</span>
-          <input type="date">
+          <input type="date" ng-model="userData.dateOfBirth">
         </label>
       </div>
       <div class="spacer" style="height: 40px;"></div>
