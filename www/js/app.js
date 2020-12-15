@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('ses', ['ionic', 'ses.user-form-controller'])
+angular.module('ses', ['ionic', 'ses.user-form-controller', 'ses.users-controller', 'ses.user-controller', 'ses.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,6 +32,18 @@ angular.module('ses', ['ionic', 'ses.user-form-controller'])
     url: '/user-form',
     templateUrl: 'pages/user-form.html',
     controller: 'UserFromCtrl'
+  })
+
+  .state('users', {
+    url: '/users',
+    templateUrl: 'pages/users.html',
+    controller: 'UsersCtrl'
+  })
+
+  .state('user-detail', {
+    url: '/user/:name',
+    templateUrl: 'pages/user-detail.html',
+    controller: 'UserCtrl'
   })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/user-form');
