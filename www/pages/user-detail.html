@@ -1,7 +1,10 @@
 <ion-view>
-  <div class="bar bar-header bar-positive">
-    <h1 class="title">{{user.firstName}}</h1>
-  </div>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+      <a class="button icon-left ion-chevron-left button-clear" href="#/users"></a>
+    </div>
+    <h1 class="title">{{ user.firstName }}</h1>
+  </ion-header-bar>
   <ion-content class="has-header" padding="true">
     <div class="card">
       <div class="item item-text-wrap">
