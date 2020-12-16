@@ -1,12 +1,7 @@
 angular.module('ses.services', [])
 
 .factory('Users', () => {
-  var users = [{
-    firstName: 'John',
-    lastName: 'Mathew',
-    gender: 'Male',
-    dateOfBirth: 'Some Date'
-  }];
+  var users = [];
 
   return {
 
@@ -14,7 +9,7 @@ angular.module('ses.services', [])
       if (!user) {
         return;
       }
-      this.users.push(user);
+      users.push(user);
     },
 
     getAllUsers: () => {
