@@ -23,7 +23,7 @@ angular.module('ses.user-form-controller', [])
     // Show Alert after adding User
     var alertPopup = $ionicPopup.alert({
       title: 'Success',
-      template: 'Save an User'
+      template: 'Saved an User'
     });
 
     // Clear User Form after adding an user
