@@ -17,6 +17,10 @@ angular.module('ses.services', [])
       this.users.push(user);
     },
 
+    getAllUsers: () => {
+      return users;
+    },
+
     get: (name) => {
       return users.find(item => item.firstName === name);
     }
