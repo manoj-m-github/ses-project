@@ -8,12 +8,15 @@ angular.module('ses.services', [])
     dateOfBirth: 'Some Date'
   }];
 
-  addUser = (user) => {
-    console.log('Saving New User');
-    this.users.push(user);
-  }
-
   return {
+
+    addUser: (user) => {
+      if (!user) {
+        return;
+      }
+      this.users.push(user);
+    },
+
     get: (name) => {
       return users.find(item => item.firstName === name);
     }
